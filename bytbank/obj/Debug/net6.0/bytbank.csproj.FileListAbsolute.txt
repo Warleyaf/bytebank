@@ -1,0 +1,15 @@
+C:\Users\warle\Documents\bytbank\bytbank\bytbank\bin\Debug\net6.0\bytbank.exe
+C:\Users\warle\Documents\bytbank\bytbank\bytbank\bin\Debug\net6.0\bytbank.deps.json
+C:\Users\warle\Documents\bytbank\bytbank\bytbank\bin\Debug\net6.0\bytbank.runtimeconfig.json
+C:\Users\warle\Documents\bytbank\bytbank\bytbank\bin\Debug\net6.0\bytbank.dll
+C:\Users\warle\Documents\bytbank\bytbank\bytbank\bin\Debug\net6.0\bytbank.pdb
+C:\Users\warle\Documents\bytbank\bytbank\bytbank\obj\Debug\net6.0\bytbank.csproj.AssemblyReference.cache
+C:\Users\warle\Documents\bytbank\bytbank\bytbank\obj\Debug\net6.0\bytbank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\warle\Documents\bytbank\bytbank\bytbank\obj\Debug\net6.0\bytbank.AssemblyInfoInputs.cache
+C:\Users\warle\Documents\bytbank\bytbank\bytbank\obj\Debug\net6.0\bytbank.AssemblyInfo.cs
+C:\Users\warle\Documents\bytbank\bytbank\bytbank\obj\Debug\net6.0\bytbank.csproj.CoreCompileInputs.cache
+C:\Users\warle\Documents\bytbank\bytbank\bytbank\obj\Debug\net6.0\bytbank.dll
+C:\Users\warle\Documents\bytbank\bytbank\bytbank\obj\Debug\net6.0\refint\bytbank.dll
+C:\Users\warle\Documents\bytbank\bytbank\bytbank\obj\Debug\net6.0\bytbank.pdb
+C:\Users\warle\Documents\bytbank\bytbank\bytbank\obj\Debug\net6.0\bytbank.genruntimeconfig.cache
+C:\Users\warle\Documents\bytbank\bytbank\bytbank\obj\Debug\net6.0\ref\bytbank.dll
