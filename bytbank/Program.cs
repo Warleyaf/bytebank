@@ -18,17 +18,17 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
         }
         static void RegistrarNovosUsuarios(List<string> cpfs, List<string> titulares, List<string> senhas, List<double> saldos) {
-            Console.Write("Digite o cpf: ");
+            Console.Write("Digite o CPF: ");
             cpfs.Add(Console.ReadLine());
-            Console.Write("Digite o nome: ");
+            Console.Write("Digite o Nome: ");
             titulares.Add(Console.ReadLine());
-            Console.Write("Digite uma senha: ");
+            Console.Write("Digite uma Senha: ");
             senhas.Add(Console.ReadLine());
             saldos.Add(0);
         }
 
         static void DeletarUsuario(List<string> cpfs, List<string> titulares, List<string> senhas, List<double> saldos) {
-            Console.WriteLine("Digite o cpf: ");
+            Console.Write("Digite o CPF: ");
             string cpfParaDeletar = Console.ReadLine();
             int indexParaDeletar = cpfs.FindIndex(d => d == cpfParaDeletar);
 
@@ -42,7 +42,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             senhas.RemoveAt(indexParaDeletar);
             saldos.RemoveAt(indexParaDeletar);
 
-            Console.WriteLine("Conta deletada com sucesso");
+            Console.WriteLine("Conta deletada com Sucesso!!!");
         }
 
         static void ListarTodasAsContas(List<string> cpfs, List<string> titulares, List<double> saldos) {
@@ -52,7 +52,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         }
 
         static void ApresentarUsuario(List<string> cpfs, List<string> titulares, List<double> saldos) {
-            Console.Write("Digite o cpf: ");
+            Console.Write("Digite o CPF: ");
             string cpfParaApresentar = Console.ReadLine();
             int indexParaApresentar = cpfs.FindIndex(cpf => cpf == cpfParaApresentar);
 
@@ -65,7 +65,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         }
 
         static void ApresentarValorAcumulado(List<double> saldos) {
-            Console.WriteLine($"Total acumulado no banco: {saldos.Sum()}");
+            Console.WriteLine($"Total acumulado no banco: R${saldos.Sum().ToString("F2")}");
             // return saldos.Sum();  //Aggregate(0.0, (x, y) => x + y);
         }
 
@@ -75,17 +75,20 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
         // Transações / login e logout
         static void TransacaoDoUsuario(List<string> cpfs, List<string> senhas, List<double> saldos, List<string> titulares) {
+            Console.WriteLine();
+            Console.WriteLine("***LOGIN***");
+
             Console.Write("Digite o seu CPF: ");
             string cpfDoUsuario = Console.ReadLine();
             int indexCpfUsuario = cpfs.FindIndex(cpf => cpf == cpfDoUsuario);
 
-            Console.Write("Digite a sua senha: ");
+            Console.Write("Digite a sua Senha: ");
             string senhaDoUsuario = Console.ReadLine();
 
             if(indexCpfUsuario == -1 || senhaDoUsuario != senhas[indexCpfUsuario]) {
                 Console.WriteLine("CPF ou SENHA incorreta, Tente novamente!!!");
             } else {
-                Console.WriteLine($"Bem vindo a BytBank {titulares[indexCpfUsuario]}");
+                Console.WriteLine($"Bem vindo ao BytBank {titulares[indexCpfUsuario]}");
                 Console.WriteLine();
                 Console.WriteLine("Qual operação gostaria de Realizar?");
 
@@ -117,28 +120,28 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
                     }
                     static void FazerDeposito(List<string> cpfs, List<string> titulares, List<double> saldos, int indexCpfUsuario) {
-                        Console.WriteLine("---------------------------------------");
+                        Console.WriteLine("-------------------------------------------------");
                         Console.Write("Digite a quantidade a ser depositado: ");
                         double qtdDeposito = double.Parse(Console.ReadLine());
                         saldos[indexCpfUsuario] += qtdDeposito;
                         Console.WriteLine("Deposito Realizado com sucesso!!!");
                         Console.WriteLine();
-                        Console.WriteLine("---------------------------------------");
+                        Console.WriteLine("-------------------------------------------------");
 
                     }
 
                     static void FazerSaque(List<string> cpfs, List<string> titulares, List<double> saldos, int indexCpfUsuario) {
-                        Console.WriteLine("---------------------------------------");
+                        Console.WriteLine("-------------------------------------------------");
                         Console.Write("Digite quantos que você quer sacar: ");
                         double qtdSaque = double.Parse(Console.ReadLine());
                         saldos[indexCpfUsuario] -= qtdSaque;
                         Console.WriteLine($"Você fez um saque de R$ {qtdSaque} Reais");
                         Console.WriteLine();
-                        Console.WriteLine("---------------------------------------");
+                        Console.WriteLine("--------------------------------------------------");
                     }
 
                     static void FazerTransferencia(List<string> cpfs, List<string> titulares, List<double> saldos, int indexCpfUsuario) {
-                        Console.WriteLine("---------------------------------------");
+                        Console.WriteLine("--------------------------------------------------");
                         Console.WriteLine("Qual o valor da transferência?");
                         double qtdTransferencia = double.Parse(Console.ReadLine());
                         saldos[indexCpfUsuario] -= qtdTransferencia;
@@ -147,8 +150,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
                         string cpfTransferencia = Console.ReadLine();
                         indexCpfUsuario = cpfs.FindIndex(cpf => cpf == cpfTransferencia);
                         saldos[indexCpfUsuario] += qtdTransferencia;
-                        Console.WriteLine($"A transferência no valor de {qtdTransferencia} foi Realizada com Sucesso!!!");
-                        Console.WriteLine("---------------------------------------");
+                        Console.WriteLine($"A transferência no valor de R${qtdTransferencia.ToString("F2")} foi Realizada com Sucesso!!!");
+                        Console.WriteLine("--------------------------------------------------");
 
                     }
 
